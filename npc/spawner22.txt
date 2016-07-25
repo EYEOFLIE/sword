@@ -1,0 +1,301 @@
+"Spawner"
+{
+	"Attacking"
+	{
+		"Wave1"
+		{
+			"Unit"					"creature_01"
+			"Times"					"20"
+			"Count"					"1"
+			"BreakTime"				"60"
+		}
+		"Wave2"
+		{
+			"Unit"					"creature_02"
+			"Times"					"20"
+			"Count"					"1"
+			"BreakTime"				"60"
+		}
+		
+		
+	}
+	"Dungeon"
+	{
+		"FBexe"
+		{
+			"SpawnTime"		"20"
+			"Level"			"0"
+			"FB_exe_1"		"exercise_unit"
+			"FB_exe_2"		"exercise_unit"
+			"FB_exe_3"		"exercise_unit"
+			"FB_exe_4"		"exercise_unit"
+			"FB_exe_5"		"exercise_unit"
+			"FB_exe_6"		"exercise_unit"
+			"FB_exe_7"		"exercise_unit"
+			"FB_exe_8"		"exercise_unit"
+			"FB_exe_9"		"exercise_unit"
+			"FB_exe_10"		"exercise_unit"
+			"FB_exe_11"		"exercise_unit"
+			"FB_exe_12"		"exercise_unit"
+			"FB_exe_13"		"exercise_unit"
+			"FB_exe_14"		"exercise_unit"
+			"FB_exe_15"		"exercise_unit"
+		}
+		"FB1"
+		{
+			"SpawnTime"		"15"
+			"Level"			"1"
+			"FB_01_1"		"fb_01_01"
+			"FB_01_2"		"fb_01_01"
+			"FB_01_3"		"fb_01_01"
+			"FB_01_4"		"fb_01_01"
+			"FB_01_5"		"fb_01_01"
+			"FB_01_6"		"fb_01_01"
+			"FB_01_7"		"fb_01_01"
+			"FB_01_8"		"fb_01_01"
+			"FB_01_9"		"fb_01_01"
+			"FB_01_10"		"fb_01_01"
+			"FB_01_11"		"fb_01_01"
+			"FB_01_12"		"fb_01_01"
+			"FB_01_13"		"fb_01_01"
+			"FB_01_14"		"fb_01_01"
+			"FB_01_15"		"fb_01_01"
+			"FB_01_16"		"fb_01_01"
+			
+		}
+		"FB1BOSS"
+		{
+			"SpawnTime"		"45"
+			"Level"			"1"
+			"FB_01_BOSS_01"	"fb_01_BOSS_01"
+		}
+		"FB2"
+		{
+			"SpawnTime"		"15"
+			"Level"			"2"
+			"FB_02_1"		"fb_02_01"
+			"FB_02_2"		"fb_02_01"
+			"FB_02_3"		"fb_02_01"
+			"FB_02_4"		"fb_02_01"
+			"FB_02_5"		"fb_02_01"
+			"FB_02_6"		"fb_02_01"
+			"FB_02_7"		"fb_02_01"
+
+		}
+		"FB2BOSS"
+		{
+			"SpawnTime"		"45"
+			"Level"			"2"
+			"FB_02_8"		"fb_02_BOSS_01"
+		}
+		"FB3"
+		{
+			"SpawnTime"		"15"
+			"Level"			"3"
+			"FB_03_1"		"fb_03_02"
+			"FB_03_2"		"fb_03_02"
+			"FB_03_3"		"fb_03_02"
+			"FB_03_5"		"fb_03_02"
+			"FB_03_4"		"fb_03_02"
+			"FB_03_6"		"fb_03_02"
+			"FB_03_7"		"fb_03_02"
+			"FB_03_8"		"fb_03_02"
+			"FB_03_9"		"fb_03_02"
+			"FB_03_10"		"fb_03_02"
+			"FB_03_11"		"fb_03_02"
+			"FB_03_12"		"fb_03_02"
+			"FB_03_13"		"fb_03_02"
+			"FB_03_14"		"fb_03_02"
+			"FB_03_15"		"fb_03_02"
+			"FB_03_16"		"fb_03_02"
+
+
+			
+		}
+		"FB3BOSS"
+		{
+			"SpawnTime"		"45"
+			"Level"			"3"
+			"FB_03_17"		"fb_03_BOSS_01"
+
+		}
+
+		"FB4"
+		{
+			"SpawnTime"		"15"
+			"Level"			"4"
+			"FB_04_1"		"fb_04_01"
+			"FB_04_2"		"fb_04_01"
+			"FB_04_3"		"fb_04_01"
+			"FB_04_4"		"fb_04_01"
+			"FB_04_5"		"fb_04_01"
+			"FB_04_6"		"fb_04_01"
+			"FB_04_7"		"fb_04_01"
+			"FB_04_8"		"fb_04_01"
+			"FB_04_9"		"fb_04_01"
+			"FB_04_10"		"fb_04_01"
+			"FB_04_11"		"fb_04_01"
+			"FB_04_12"		"fb_04_01"
+		}
+		"FB4BOSS"
+		{
+			"SpawnTime"		"75"
+			"Level"			"4"
+			"FB_04_13"		"fb_04_BOSS_02"
+
+		}
+		"FB5"
+		{
+			"SpawnTime"		"15"
+			"Level"			"5"
+			"FB_05_1"		"fb_05_BOSS_01"
+			"FB_05_2"		"fb_05_BOSS_01"
+			"FB_05_3"		"fb_05_BOSS_01"
+			"FB_05_4"		"fb_05_BOSS_01"
+			"FB_05_5"		"fb_05_BOSS_01"
+			"FB_05_6"		"fb_05_BOSS_01"
+			"FB_05_7"		"fb_05_BOSS_01"
+			"FB_05_8"		"fb_05_BOSS_01"
+			"FB_05_9"		"fb_05_BOSS_01"
+			"FB_05_10"		"fb_05_BOSS_01"
+			"FB_05_11"		"fb_05_BOSS_01"
+			"FB_05_12"		"fb_05_BOSS_01"
+
+		}
+		"FB5BOSS"
+		{
+			"SpawnTime"		"75"
+			"Level"			"4"
+			"FB_05_13"		"fb_05_BOSS_02"
+
+		}
+		
+		"FB6"
+		{
+			"SpawnTime"		"15"
+			"Level"			"6"
+			"FB_06_1"		"fb_06_01"
+			"FB_06_2"		"fb_06_01"
+			"FB_06_3"		"fb_06_01"
+			"FB_06_4"		"fb_06_01"
+			"FB_06_5"		"fb_06_01"
+			"FB_06_6"		"fb_06_01"
+			"FB_06_7"		"fb_06_01"
+			"FB_06_8"		"fb_06_01"
+			"FB_06_9"		"fb_06_01"
+			"FB_06_10"		"fb_06_01"
+			"FB_06_11"		"fb_06_01"
+			"FB_06_12"		"fb_06_01"
+			
+		}
+		"FB6BOSS"
+		{
+			"SpawnTime"		"75"
+			"Level"			"6"
+			"FB_06_13"		"fb_06_BOSS_01"
+			
+		}
+		"FB7"
+		{
+			"SpawnTime"		"15"
+			"Level"			"7"
+			"FB_07_1"		"fb_07_01"
+			"FB_07_2"		"fb_07_01"
+			"FB_07_3"		"fb_07_01"
+			"FB_07_4"		"fb_07_01"
+			"FB_07_5"		"fb_07_01"
+			"FB_07_6"		"fb_07_01"
+			"FB_07_7"		"fb_07_01"
+			"FB_07_8"		"fb_07_01"
+			"FB_07_9"		"fb_07_01"
+			"FB_07_10"		"fb_07_01"
+			"FB_07_11"		"fb_07_01"
+			
+		}
+		"FB8"
+		{
+			"SpawnTime"		"15"
+			"Level"			"8"
+			"FB_08_1"		"fb_08_01"
+			"FB_08_2"		"fb_08_01"
+			"FB_08_3"		"fb_08_01"
+			"FB_08_4"		"fb_08_01"
+			"FB_08_5"		"fb_08_01"
+			"FB_08_6"		"fb_08_01"
+			"FB_08_7"		"fb_08_01"
+			"FB_08_8"		"fb_08_01"
+			"FB_08_9"		"fb_08_01"
+			"FB_08_10"		"fb_08_01"
+			"FB_08_11"		"fb_08_01"
+			"FB_08_12"		"fb_08_01"
+			"FB_08_13"		"fb_08_01"
+			"FB_08_14"		"fb_08_01"
+			"FB_08_15"		"fb_08_01"
+			"FB_08_16"		"fb_08_01"
+
+		}
+
+		"FB9"
+		{
+			"SpawnTime"		"30"
+			"Level"			"9"
+			"FB_09_1"		"fb_09_BOSS_01"
+			"FB_09_2"		"fb_09_BOSS_01"
+			"FB_09_3"		"fb_09_BOSS_01"
+			"FB_09_4"		"fb_09_BOSS_01"
+			"FB_09_5"		"fb_09_BOSS_01"
+			"FB_09_6"		"fb_09_BOSS_01"
+			"FB_09_7"		"fb_09_BOSS_01"
+			"FB_09_8"		"fb_09_BOSS_01"
+			"FB_09_9"		"fb_09_BOSS_01"
+			"FB_09_10"		"fb_09_BOSS_01"
+			"FB_09_11"		"fb_09_BOSS_01"
+			"FB_09_12"		"fb_09_BOSS_01"
+			"FB_09_13"		"fb_09_BOSS_01"
+			"FB_09_14"		"fb_09_BOSS_01"
+		}
+		"FB10"
+		{
+			"SpawnTime"		"20"
+			"Level"			"10"
+			"FB_10_1"		"fb_10_BOSS_01"
+			"FB_10_2"		"fb_10_BOSS_01"
+			"FB_10_3"		"fb_10_BOSS_01"
+			"FB_10_4"		"fb_10_BOSS_01"
+			"FB_10_5"		"fb_10_BOSS_01"
+			"FB_10_6"		"fb_10_BOSS_01"
+			"FB_10_7"		"fb_10_BOSS_01"
+			"FB_10_8"		"fb_10_BOSS_01"
+			"FB_10_9"		"fb_10_BOSS_01"
+			"FB_10_10"		"fb_10_BOSS_01"
+			"FB_10_11"		"fb_10_BOSS_01"
+			"FB_10_12"		"fb_10_BOSS_01"
+			"FB_10_13"		"fb_10_BOSS_01"
+			"FB_10_14"		"fb_10_BOSS_01"
+			"FB_10_15"		"fb_10_BOSS_01"
+
+		}
+		"FB11"
+		{
+			"SpawnTime"		"20"
+			"Level"			"10"
+			"FB_11_1"		"fb_11_BOSS_01"
+			"FB_11_2"		"fb_11_BOSS_01"
+			"FB_11_3"		"fb_11_BOSS_01"
+			"FB_11_4"		"fb_11_BOSS_01"
+			"FB_11_5"		"fb_11_BOSS_01"
+			"FB_11_6"		"fb_11_BOSS_01"
+			"FB_11_7"		"fb_11_BOSS_01"
+			"FB_11_8"		"fb_11_BOSS_01"
+			"FB_11_9"		"fb_11_BOSS_01"
+			"FB_11_10"		"fb_11_BOSS_01"
+			"FB_11_11"		"fb_11_BOSS_01"
+			"FB_11_12"		"fb_11_BOSS_01"
+			"FB_11_13"		"fb_11_BOSS_01"
+			"FB_11_14"		"fb_11_BOSS_01"
+			"FB_11_15"		"fb_11_BOSS_01"
+
+		}
+	
+	}
+}

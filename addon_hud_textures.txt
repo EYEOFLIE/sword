@@ -1,0 +1,14 @@
+""
+{
+    "TextureData"
+    {
+        "minimap_bird"
+        {
+            "file"     "materials/vgui/hud/minimap_bird_icon.vmat"
+            "x"        "0"
+            "y"        "0"
+            "width"    "64"
+            "height"   "64"
+        }
+    }
+}

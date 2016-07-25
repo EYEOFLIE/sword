@@ -1,0 +1,288 @@
+"backgroundmusic_baihu"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_baihu.vsnd"
+	}
+}
+"backgroundmusic_bingfenggu"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_bingfenggu.vsnd"
+	}
+}
+"backgroundmusic_chiyouzhong"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_chiyouzhong.vsnd"
+	}
+}
+"backgroundmusic_donghai"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_donghai.vsnd"
+	}
+}
+"backgroundmusic_dongzhongtian"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_dongzhongtian.vsnd"
+	}
+}
+"backgroundmusic_futuxuehai"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_futuxuehai.vsnd"
+	}
+}
+"backgroundmusic_fuxi"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_fuxi.vsnd"
+	}
+}
+"backgroundmusic_guijie"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_guijie.vsnd"
+	}
+}
+"backgroundmusic_guiyu"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_guiyu.vsnd"
+	}
+}
+"backgroundmusic_huaguoshan"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_huaguoshan.vsnd"
+	}
+}
+"backgroundmusic_jidijingong"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_jidijingong.vsnd"
+	}
+}
+"backgroundmusic_jidiwuzhan"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_jidiwuzhan.vsnd"
+	}
+}
+"backgroundmusic_langxue"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_langxue.vsnd"
+	}
+}
+"backgroundmusic_qinglong"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_qinglong.vsnd"
+	}
+}
+"backgroundmusic_sanshisantianwai"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_sanshisantianwai.vsnd"
+	}
+}
+"backgroundmusic_shazhongfoguo"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_shazhongfoguo.vsnd"
+	}
+}
+"backgroundmusic_shennong"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_shennong.vsnd"
+	}
+}
+"backgroundmusic_tianting"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_tianting.vsnd"
+	}
+}
+"backgroundmusic_xuanwu"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_xuanwu.vsnd"
+	}
+}
+"backgroundmusic_xuanyuan"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_xuanyuan.vsnd"
+	}
+}
+"backgroundmusic_zhizhudong"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_zhizhudong.vsnd"
+	}
+}
+"backgroundmusic_zhuque"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_zhuque.vsnd"
+	}
+}
+"backgroundmusic_zuwu"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_zuwu.vsnd"
+	}
+}
+"backgroundmusic_empty"
+{
+	"dsp"	"0"
+	"fadetime" "1"
+
+	"playlooping"
+	{ 
+		"volume"	".80"
+		"pitch"		"100"
+		"wave"		"sounds/music/backgroundmusic_empty.vsnd"
+	}
+}

@@ -1,0 +1,677 @@
+
+"GlobalTalk"
+{
+	"quest_01_01"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"1"							
+		{	
+			"text"	"阿婆，你可算回来了，找你半天了"
+			"talktime"	"3"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"阿贵呀，我在山上被狼群困住了，可得谢谢这几位大虾呀"
+			"talktime"	"3"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		
+	}
+
+	"quest_01_02"
+	{
+		"0"							
+		{	
+			"text"	"阿婆，你可算回来了，找你半天了"
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"1"							
+		{	
+			"text"	"多谢几位壮士救了阿婆的命，咱们村小，但还是请你们到咱们村做客"
+			"talktime"	"3"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"这是我们应该做的，不必谢，实不相瞒，我们本是天玄第子，此次下山是想找一个人，不知村子最近有没有生人出没"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"3"
+		{
+			"text"	"陌生人？最近没有见到生人呀。。。。哦，我想起来了，一个月前，村子里确实来了一位小姑娘。还在老村长家住了几日就走了，你可以问问村长"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"4"
+		{
+			"text"	"好的"
+			"talktime"	"1"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		
+	}
+
+	"quest_01_03"
+	{
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+		}
+		"1"							
+		{	
+			"text"	"老人家，我们听说一个月村子里来了一个陌生的小姑娘，不知道是不是真有些事"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"年轻人，我听阿婆说你们救了她，老夫要感谢你们呀"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"3"
+		{
+			"text"	"噢，举手之劳，何足挂齿，助人为乐是我们天玄第子应该做的."
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"4"
+		{
+			"text"	"嗯。。。。果然年轻有为，没错，一个月前，有个小姑娘在村子里待了几天，不像是坏人呀"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"5"
+		{
+			"text"	"老人家，能否描述一下那位姑娘的模样？"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"6"
+		{
+			"text"	"小姑娘清秀可人，十分计人喜欢呀，虽然咱们村子小，没什么外人进出，但我很是喜欢这个小姑娘呀，可惜。。。。。。"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"7"
+		{
+			"text"	"可惜？可惜什么呀，老人家您在“可惜”什么呀？"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"8"
+		{
+			"text"	"也没什么啦，不说啦不说啦。。。。。。老了，记不住事了。。。。。。。。"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+
+		"9"
+		{
+			"text"	"老人家，您知道她后来去哪了么？"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"10"
+		{
+			"text"	"不知道呀。。。。那天早上起来后她就走了。。。。。。。。"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"11"
+		{
+			"text"	"好吧，谢谢老人家。"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"2"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+
+		
+	}
+
+	"quest_01_04"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"1"							
+		{	
+			"text"	"老村长似乎有所隐瞒，不如再问问别的村民吧！"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		
+		
+	}
+	"quest_01_05"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"1"							
+		{	
+			"text"	"怎么附近有妖气？"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"我已经看到你了，妖怪，还不快快显形！"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+			
+	}
+	"quest_01_06"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"1"							
+		{	
+			"text"	"村长，村中出现妖魔，不知最近有没有什么奇怪的事情发生过？"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"并没有！"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		
+			
+	}
+	"quest_01_07"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"1"							
+		{	
+			"text"	"是谁杀了我们老大的儿子，快快报上名来，定要你们血债血偿"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"就是中间那个修道的人！"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+
+			
+	}
+	"quest_01_08"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"1"							
+		{	
+			"text"	"是我杀的，怎么了，要打就打，除魔卫道天经地义"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+
+			
+	}
+
+	"quest_01_09"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"1"							
+		{	
+			"text"	"我们打小就生活在这村子里，村子从来都很平静"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"可自打你们来了之后出了这么多事。。。哎"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		
+		
+			
+	}
+	"quest_01_10"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"1"							
+		{	
+			"text"	"村长，此事由我们而起，我们定不会不此放手，不管来多少妖魔，我们就杀多少"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"我们会给寨子加上结界，放心吧"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		
+		
+			
+	}
+
+	"quest_01_11"
+	{	
+		"0"							
+		{	
+			"text"	""
+			"talktime"	"-0.5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"1"							
+		{	
+			"text"	"村长，村子里的妖魔已尽数被消灭"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"2"							
+		{	
+			"text"	"谢谢你们，多亏了你们村子才保全了"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"3"							
+		{	
+			"text"	"没什么，我们本就是修道的人，降妖除魔是我们的本分"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		"4"							
+		{	
+			"text"	"好，好，我们也并不是不尽人情的人，之前对你们有所防范，是因为这修道的人也并非全是你们这样的好人呀，你们所说的那位姑娘，我也不知道去哪了，只是听那位姑娘的口音像是北方的人，你们可以向北走再打问打问。"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"5"							
+		{	
+			"text"	"北方？多谢村长帮忙，那我们就不打扰你们了"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+
+		"6"							
+		{	
+			"text"	"这里是村民为了答谢你们的一点心意，还请各位不要嫌弃，都收了吧。"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "2"
+		}
+		"7"							
+		{	
+			"text"	"这。。。老人家，不可，不可，师傅交待过，不行的"
+			"talktime"	"5"
+			"jiaodutime"	"0"
+			"juli"		"0"
+			"jiaodu"	"0"
+			"missname"	"0"
+			"type"	"0"
+			"next"	""
+			"nexttext"	""
+			"queue" "1"
+		}
+		
+		
+			
+	}
+		
+}	

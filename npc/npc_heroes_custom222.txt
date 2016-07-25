@@ -1,0 +1,75 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Templar Assassin
+	//=================================================================================================================
+	"npc_dota_hero_templar_assassin_template"
+	{
+		"override_hero"				"npc_dota_hero_templar_assassin"			// Hero to override
+		"Ability1"					"templar_assassin_refraction_holdout"		// Ability 1
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+	//剑男
+	"npc_dota_hero_yangxiao"
+	{
+		"override_hero"			"npc_dota_hero_legion_commander"
+		"AbilityLayout" 		"6"
+		"Ability1"				"" 
+		"Ability2"				"" 
+		"Ability3"				"" 
+		"Ability4"				"" 
+		"Ability5"				"yu_jian_fei_xing"
+		"Ability6"				""
+		"Ability7"				""
+		
+		"Model"                 "models/heroes/legion_commander/legion_commander.vmdl"
+		"ModelScale"            "0.4"
+		"AttackAnimationPoint"		"0.3"	
+		//攻击前摇
+		
+		"ArmorPhysical"				"100"
+			//物理护甲
+		"AttackDamageMin"			"10"
+			//最大攻击力
+		"AttackDamageMax"			"10"
+			//最小攻击力
+			
+		"AttributeBaseStrength"		"15"
+			//基础力量
+		"AttributeStrengthGain"		"0.0"
+			//每级增加的力量，力量成长
+		"AttributeBaseAgility"		"10"
+			//基础敏捷
+		"AttributeAgilityGain"		"0.0"
+			//每级增加的敏捷，敏捷成长
+		"AttributeBaseIntelligence"	"25"
+			//基础智力
+		"AttributeIntelligenceGain"	"5.0"
+			//每级增加的智力，智力成长
+			
+		"MovementSpeed"				"300"
+			//基础移动速度
+		"MovementTurnRate"			"1"
+			//转身速度
+		"StatusHealth"				"500"
+			//基础生命值
+		"StatusHealthRegen"			"0.0"
+			//基础生命恢复
+		"StatusMana"				"50"
+			//基础魔法值
+		"StatusManaRegen"			"0.0"
+			//基础魔法恢复
+	
+		"VisionDaytimeRange"		"1050"
+			//白天视野大小
+		"VisionNighttimeRange"		"700"
+			//晚上视野大小
+		"HealthBarOffset"			"270"
+		
+	    
+	}
+
+}

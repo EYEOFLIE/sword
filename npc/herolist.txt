@@ -1,0 +1,13 @@
+"CustomHeroList"
+{
+	
+	"npc_dota_hero_lina"		"1"
+	"npc_dota_hero_phantom_assassin" "1"
+	
+	"npc_dota_hero_legion_commander"		"1"
+	"npc_dota_hero_crystal_maiden"	"1"
+	"npc_dota_hero_centaur"		""
+	//"npc_dota_hero_drow_ranger"		"1"
+
+
+}

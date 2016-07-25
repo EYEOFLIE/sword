@@ -1,0 +1,668 @@
+﻿
+"GlobalQuests"
+{
+	"quest_example"
+	{
+		"NPC"							"npc_task_0001"		//接受任务和提交任务的NPC
+		"Infinity"						"1" 				//任务可以无限接受
+		"AutoSubmit"					"0" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+			}
+			"LogicalFormula"			"$level<10" 		//逻辑公式，结果为真才能接受任务
+			//"Text"						"需要等级小于10。"	//前提条件文本，条件不足时显示
+		}
+		"AcceptText"					"这是样例任务。"			//任务接受的文本，任务简介
+		"FinishedText"					"你完成了样例任务。"		//任务完成的文本，完成提示
+		"SubmitedText"					"感谢你完成了样例任务。"	//任务提交的文本，任务提交后的显示
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"FIND_UNIT" 		//任务类型：查找单位
+				"FindUnit"				"npc_task_fb_01_02"		//查找单位的UnitName
+				"Text"					"#game_ui_quests_message_meet_npc" //子任务文本
+			}
+			"2"
+			{
+				"Type"					"KILL_UNIT" 							//任务类型：击杀单位
+				"KillUnit"				"fb_01_01" 						//击杀单位的UnitName
+				"KillNum"				"1" 									//击杀个数
+				"Text"					"#game_ui_quests_message_kill_unit"	//子任务文本
+			}
+			"3"
+			{
+				"Type"					"FIND_ITEM" 										//任务类型：收集物品（可以一次提交部分物品，需要全部提交到指定单位才算达成要求）
+				"FindItem"				"item_0001" 										//收集物品的Name
+				"ItemNum"				"5" 												//收集个数
+				"SubmitUnit"			"npc_task_fb_01_01" 									//把物品提交到指定单位
+				"Text"					"#game_ui_quests_message_submit_item"	//子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Fixed" 										//固定奖励
+			{
+				"EXP"					"200"
+			}
+			"Random" 										//随机奖励（N选1）
+			{
+				"1"
+				{
+					"Gold"				"1000"
+				}
+			}
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"50" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+			"Extra"											//额外奖励
+			{
+				"1"
+				{
+					"LogicalFormula"			"$FinCnt%10==0"	//需要逻辑公式结果为真，才会奖励；样例为每完成10次则额外奖励
+					"MAX_HP"					"1000"
+				}
+			}
+		}
+	}
+	"questgroup_example"
+	{
+		"IsQuestGroup"					"1" 						//同一时间只能接受任务组中的一个子任务
+		"NPC"							"npc_task_0001"
+		"Infinity"						"1"
+		"AcceptText"					"这是样例任务组。"
+		"FinishedText"					"你完成了样例任务组。"
+		"SubmitedText"					"感谢你完成了样例任务组。"
+		"Precondition" 												//任务条件
+		{
+			"PreQuests" 											//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+			}
+			"LogicalFormula"			"$level<10" 				//逻辑公式，结果为真才能接受任务
+			"Text"						"10级以下才能接受此任务。"	//前提条件文本，条件不足时显示
+		}
+		"Quests" 													//任务集合
+		{
+			"RequestMissionCount"		"3"
+			"1"
+			{
+				"AcceptChance"			"50" 				//去掉此项则接受几率为100%
+				"AcceptText"			"这是样例任务组-1。"
+				"FinishedText"			"你完成了样例任务组-1。"
+				"SubmitedText"			"感谢你完成了样例任务组-1。"
+				"SubQuests"
+				{
+					"1"
+					{
+						"Type"			"KILL_UNIT"
+						"KillUnit"		"fb_01_01"
+						"KillNum"		"1"
+						"Text"			"#game_ui_quests_message_kill_unit"	//子任务文本
+					}
+				}
+				"Rewards"
+				{
+					"Fixed" 										//固定奖励
+					{
+						"EXP"					"200"
+					}
+				}
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Fixed" 										//固定奖励
+			{
+				"EXP"					"200"
+				"Gold"					"500"
+			}
+			"Random" 										//随机奖励（N选1）
+			{
+				"1"
+				{
+					"Gold"				"1000"
+				}
+			}
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"50" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+			"Extra"
+			{
+				"1" 										//固定奖励
+				{
+					"LogicalFormula"	"$FinCnt%3==0"
+					"Level"				"1"
+				}
+			}
+		}
+	}
+
+	//作弊
+
+	"quest_zuobi"
+	{
+		"NPC"							"npc_task_marisa"		//接受任务和提交任务的NPC
+		"Infinity"						"0" 				//任务可以无限接受
+		"AutoSubmit"					"0" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+				"IsZuobi"				"1"
+			}
+		}
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"FIND_UNIT" 		//任务类型：查找单位
+				"FindUnit"				"npc_task_marisa"		//查找单位的UnitName
+				"Text"					"#game_ui_quests_message_meet_npc" //子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Fixed"
+			{
+				"HeroStateMulti"		"7"
+				"Gold"					"99999"
+				"Ablity03"				"1"
+				"Ablity04"				"1"
+				"Level"					"100"
+			}
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"11" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0173"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"2"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0171"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"3"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0172"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"4"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0174"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"5"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0175"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"6"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0176"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"7"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0011"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"8"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0022"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"9"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0033"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"10"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0044"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"11"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_0055"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+		}
+	}
+
+	//圣诞礼物
+
+	"quest_chrismas"
+	{
+		"NPC"							"npc_task_marisa"		//接受任务和提交任务的NPC
+		"Infinity"						"0" 				//任务可以无限接受
+		"AutoSubmit"					"0" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+			}
+		}
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"FIND_UNIT" 		//任务类型：查找单位
+				"FindUnit"				"npc_task_marisa"		//查找单位的UnitName
+				"Text"					"#game_ui_quests_message_meet_npc" //子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"100" 				//奖励概率，去掉此项则几率为0
+					"item_1012"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+		}
+	}
+
+	
+
+	
+
+	//击杀TA任务
+
+	"quest_zhuxian_01_01"
+	{
+		"NPC"							"npc_caoyao_unit"	//接受任务和提交任务的NPC
+		"Infinity"						"0" 				//任务可以无限接受
+		"AutoSubmit"					"0" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+			}
+		}
+		"AcceptText"					"miaoshu"			//任务接受的文本，任务简介
+		"FinishedText"					"wancheng"																	//任务完成的文本，完成提示
+		"SubmitedText"					"renwutijiao"							//任务提交的文本，任务提交后的显示
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"KILL_UNIT" 							//任务类型：击杀单位
+				"KillUnit"				"npc_cike3_BOSS" 								//击杀单位的UnitName
+				"KillNum"				"1" 									//击杀个数
+				"Text"					"#game_ui_quests_message_kill_unit"	//子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Fixed" 										//固定奖励
+			{
+				"EXP"					"200"
+				"cultivation"				"20"
+			}
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"2"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"3"
+				{
+					"Chance"			"20" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+			"Extra"											//额外奖励
+			{
+				"1"
+				{
+					"LogicalFormula"			"$FinCnt%10==0"	//需要逻辑公式结果为真，才会奖励；样例为每完成10次则额外奖励
+					"MAX_HP"					"1000"
+				}
+			}
+		}
+	}
+	//击杀剑灵任务
+
+	"quest_zhuxian_01_02"
+	{
+		"NPC"							"npc_caoyao_unit"	//接受任务和提交任务的NPC
+		"Infinity"						"0" 				//任务可以无限接受
+		"AutoSubmit"					"0" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+				"quest_zhuxian_01_01"	"1"
+			}
+		}
+		"AcceptText"					"miaoshu"			//任务接受的文本，任务简介
+		"FinishedText"					"wancheng"																	//任务完成的文本，完成提示
+		"SubmitedText"					"renwutijiao"							//任务提交的文本，任务提交后的显示
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"KILL_UNIT" 							//任务类型：击杀单位
+				"KillUnit"				"npc_jianling_unit" 								//击杀单位的UnitName
+				"KillNum"				"1" 									//击杀个数
+				"Text"					"#game_ui_quests_message_kill_unit"	//子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Fixed" 										//固定奖励
+			{
+				"EXP"					"200"
+				"cultivation"				"20"
+			}
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"2"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"3"
+				{
+					"Chance"			"20" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+			"Extra"											//额外奖励
+			{
+				"1"
+				{
+					"LogicalFormula"			"$FinCnt%10==0"	//需要逻辑公式结果为真，才会奖励；样例为每完成10次则额外奖励
+					"MAX_HP"					"1000"
+				}
+			}
+		}
+	}
+
+	//初始物品任务
+
+	"quest_zhuxian_01_03"
+	{
+		"NPC"							"npc_caoyao_unit"		//接受任务和提交任务的NPC
+		"Infinity"						"0" 				//任务可以无限接受
+		"AutoSubmit"					"1" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+				"quest_zhuxian_01_02"	"1"
+			}
+		}
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"FIND_UNIT" 		//任务类型：查找单位
+				"FindUnit"				"npc_zhangtianshi_unit"		//查找单位的UnitName
+				"Text"					"#game_ui_quests_message_meet_npc" //子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"2"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"3"
+				{
+					"Chance"			"20" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+		}
+	}
+
+	//初始物品任务
+
+	"quest_test"
+	{
+		"NPC"							"npc_zhanglao_unit"		//接受任务和提交任务的NPC
+		"Infinity"						"1" 				//任务可以无限接受
+		"AutoSubmit"					"1" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+				
+			}
+		}
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"FIND_UNIT" 		//任务类型：查找单位
+				"FindUnit"				"npc_zhangtianshi_unit"		//查找单位的UnitName
+				"Text"					"#game_ui_quests_message_meet_npc" //子任务文本
+			}
+		
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"2"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"3"
+				{
+					"Chance"			"20" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+		}
+	}
+
+	//迷路老妇任务
+
+	"quest_milufunv"
+	{
+		"NPC"							"npc_nvnongfu_unit"		//接受任务和提交任务的NPC
+		"Infinity"						"0" 				//任务可以无限接受
+		"AutoSubmit"					"1" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+				
+			}
+		}
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"FIND_UNIT" 		//任务类型：查找单位
+				"FindUnit"				"npc_nongming_unit"		//查找单位的UnitName
+				"Text"					"#game_ui_quests_message_meet_npc" //子任务文本
+			}
+
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"2"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"3"
+				{
+					"Chance"			"20" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+		}
+	}
+
+
+
+	//杀狼任务
+
+	"quest_fb_01_01"
+	{
+		"NPC"							"npc_lieren"		//接受任务和提交任务的NPC
+		"Infinity"						"1" 				//任务可以无限接受
+		"AutoSubmit"					"0" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+				
+			}
+		}
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"KILL_UNIT" 							//任务类型：击杀单位
+				"KillUnit"				"fb_01_01" 						//击杀单位的UnitName
+				"KillNum"				"5" 									//击杀个数
+				"Text"					"#game_ui_quests_message_kill_unit"	//子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Chance" 										//概率奖励
+			{
+				"Limit"					"1" 				//一次最多奖励个数
+				"1"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"2"
+				{
+					"Chance"			"40" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+				"3"
+				{
+					"Chance"			"20" 				//奖励概率，去掉此项则几率为0
+					"item_0001"			"1" 				//物品名称     物品个数 （物品名称必须[item_]前缀）
+				}
+			}
+		}
+	}
+
+	//采药任务
+
+	"quest_caoyao"
+	{
+		"NPC"							"npc_zhanglao_unit"	//接受任务和提交任务的NPC
+		"IsMainQuest"					"0"
+		"Infinity"						"0" 				//任务可以无限接受
+		"AutoSubmit"					"0" 				//[AutoSubmit]为1不需要提交任务，完成任务要求后立即获得奖励
+		"Precondition" 										//任务条件
+		{
+			"PreQuests" 									//前置任务，需要全部前置任务的完成次数打到指定次数才能接受任务
+			{
+									//任务名称      完成次数需求
+			}
+		}
+		"AcceptText"					"狼妖谷的内洞有一只巨狼，称为狼妖王，乃百年狼妖所化，给我其内丹，我可助你飞升。"	//任务接受的文本，任务简介
+		"FinishedText"					"已交付狼王内丹。"																	//任务完成的文本，完成提示
+		"SubmitedText"					"汝之道法期可成，我已将内丹炼化传于你。"											//任务提交的文本，任务提交后的显示
+		"SubQuests" 												//子任务，需要完成全部子任务
+		{
+			"1"
+			{
+				"Type"					"FIND_ITEM" 										//任务类型：收集物品（可以一次提交部分物品，需要全部提交到指定单位才算达成要求）
+				"FindItem"				"item_0001" 										//收集物品的Name
+				"ItemNum"				"1" 												//收集个数
+				"SubmitUnit"			"npc_zhanglao_unit" 									//把物品提交到指定单位
+				"Text"					"#hsj_game_ui_quests_message_submit_item"	//子任务文本
+			}
+			"2"
+			{
+				"Type"					"FIND_ITEM" 										//任务类型：收集物品（可以一次提交部分物品，需要全部提交到指定单位才算达成要求）
+				"FindItem"				"item_0001" 										//收集物品的Name
+				"ItemNum"				"1" 												//收集个数
+				"SubmitUnit"			"npc_zhanglao_unit" 								//把物品提交到指定单位
+				"Text"					"#hsj_game_ui_quests_message_submit_item"	//子任务文本
+			}
+			"3"
+			{
+				"Type"					"FIND_ITEM" 										//任务类型：收集物品（可以一次提交部分物品，需要全部提交到指定单位才算达成要求）
+				"FindItem"				"item_0001" 										//收集物品的Name
+				"ItemNum"				"1" 												//收集个数
+				"SubmitUnit"			"npc_zhanglao_unit" 								//把物品提交到指定单位
+				"Text"					"#hsj_game_ui_quests_message_submit_item"	//子任务文本
+			}
+		}
+		"Rewards" 											//任务奖励
+		{
+			"Fixed" 										//固定奖励
+			{
+				"EXP"					"3000"
+				"STR"					"50"
+				"AGI"					"50"
+				"INT"					"50"
+				"EquipMulti"			"1"
+			}
+		}
+	}
+
+	
+
+}

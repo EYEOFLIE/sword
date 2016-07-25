@@ -1,0 +1,77 @@
+"dota_shops"
+{
+	"consumables"
+	{
+		"item01"		"item_1001"
+		"item02"		"item_1002"
+		"item03"		"item_1003"
+
+		"item04"		"item_1004"
+		"item05"		"item_1005"
+		"item06"		"item_1006"
+
+		"item07"		"item_1007"
+		"item08"		"item_1008"
+		"item09"		"item_1009"
+		"item10"		"item_1010"
+		"item11"		"item_0001"
+		"item12"		"item_1011"
+		"item13"		"item_1012"
+		"item14"		"item_1013"
+		"item15"		"item_1014"
+	}
+
+	"attributes"
+	{
+		
+	}
+
+	"weapons_armor"
+	{
+		
+	}
+	
+	"misc"
+	{
+		
+	}	
+	
+	"basics"
+	{
+	}
+
+	"support"
+	{					
+	}
+	
+	"magics"
+	{	
+	}
+	
+	"weapons"
+	{
+	}
+
+	"defense"
+	{
+	}
+	
+	
+	"artifacts"
+	{
+	}
+
+	"sideshop1"
+	{
+
+	}
+
+	"sideshop2"
+	{
+	}
+	
+	"secretshop"
+	{
+
+	}
+}

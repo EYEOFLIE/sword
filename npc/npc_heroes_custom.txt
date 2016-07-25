@@ -1,0 +1,429 @@
+// Dota2 Editor
+// Get latest version: https://github.com/zombieJ/nw-dota2editor
+
+"DOTAHeroes"
+{
+	"Version"		"1"
+
+	"npc_dota_hero_shannv"
+	{
+		"override_hero"	"npc_dota_hero_lina"
+		"AbilityLayout"	"6"
+		"Ability1"	"zhangwuji_01"
+		"Ability2"	"zhangwuji_02"
+		"Ability3"	"zhangwuji_03"
+		"Ability4"	"zhangwuji_04"
+		"Ability5"	"yujianfeixing"
+		"Ability6"	"ability_custom_hero_state"
+		"Ability7"	"Ability_Teleport"
+		"ModelScale"	"0.4"
+		"Model"	"models/yixian/yixian.vmdl"
+		"AttackAnimationPoint"	"0"
+		// 攻击前摇
+		"ArmorPhysical"	"100"
+		// 物理护甲
+		"AttackDamageMin"	"40"
+		// 最大攻击力
+		"AttackDamageMax"	"60"
+		// 最小攻击力
+		"AttributeBaseStrength"	"15"
+		// 基础力量
+		"AttributeStrengthGain"	"0.0"
+		// 每级增加的力量，力量成长
+		"AttributeBaseAgility"	"100"
+		// 基础敏捷
+		"AttributeAgilityGain"	"0.0"
+		// 每级增加的敏捷，敏捷成长
+		"AttributeBaseIntelligence"	"25"
+		// 基础智力
+		"AttributeIntelligenceGain"	"5.0"
+		// 每级增加的智力，智力成长
+		"MovementSpeed"	"300"
+		// 基础移动速度
+		"MovementTurnRate"	"1"
+		// 转身速度
+		"StatusHealth"	"500000"
+		// 基础生命值
+		"StatusHealthRegen"	"0.0"
+		// 基础生命恢复
+		"StatusMana"	"50"
+		// 基础魔法值
+		"StatusManaRegen"	"0.0"
+		// 基础魔法恢复
+		"VisionDaytimeRange"	"1050"
+		// 白天视野大小
+		"VisionNighttimeRange"	"700"
+		// 晚上视野大小
+		"HealthBarOffset"	"270"
+		"ProjectileSpeed"	"1050"
+		"ProjectileModel"	"particles/units/heroes/hero_vengeful/vengeful_base_attack.vpcf"
+		"Ability8"	""
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_HERO"
+	}
+
+	"npc_dota_hero_jiannan"
+	{
+		"override_hero"	"npc_dota_hero_antimage"
+		"AbilityLayout"	"6"
+		"Ability1"	"yangxiao_01"
+		"Ability2"	"yangxiao_02"
+		"Ability3"	"yangxiao_03"
+		"Ability4"	"budai_02"
+		"Ability5"	"yujianfeixing"
+		"Ability6"	"Ability_Teleport"
+		"Ability7"	"ability_custom_hero_state"
+		"Model"	"models/jiannan/jiannan.vmdl"
+		"ModelScale"	"0.4"
+		"AttackAnimationPoint"	"0.3"
+		// 攻击前摇
+		"AttackRange"	"200"
+		"ArmorPhysical"	"100"
+		// 物理护甲
+		"AttackDamageMin"	"500"
+		// 最大攻击力
+		"AttackDamageMax"	"500"
+		// 最小攻击力
+		"AttributeBaseStrength"	"15"
+		// 基础力量
+		"AttributeStrengthGain"	"0.0"
+		// 每级增加的力量，力量成长
+		"AttributeBaseAgility"	"10"
+		// 基础敏捷
+		"AttributeAgilityGain"	"0.0"
+		// 每级增加的敏捷，敏捷成长
+		"AttributeBaseIntelligence"	"25"
+		// 基础智力
+		"AttributeIntelligenceGain"	"5.0"
+		// 每级增加的智力，智力成长
+		"MovementSpeed"	"300"
+		// 基础移动速度
+		"MovementTurnRate"	"1"
+		// 转身速度
+		"StatusHealth"	"5000"
+		// 基础生命值
+		"StatusHealthRegen"	"0.0"
+		// 基础生命恢复
+		"StatusMana"	"50"
+		// 基础魔法值
+		"StatusManaRegen"	"0.0"
+		// 基础魔法恢复
+		"VisionDaytimeRange"	"1050"
+		// 白天视野大小
+		"VisionNighttimeRange"	"700"
+		// 晚上视野大小
+		"HealthBarOffset"	"270"
+		"Ability8"	""
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+	}
+
+	"npc_dota_hero_daonv"
+	{
+		"override_hero"	"npc_dota_hero_dragon_knight"
+		"AbilityLayout"	"6"
+		"Ability1"	"ab_daonv_nuqi_lua"
+		"Ability2"	"daonv_qunchaofeng"
+		"Ability3"	"daonv_danchaofeng"
+		"Ability4"	"daonv_luankan"
+		"Ability5"	"yujianfeixing"
+		"Ability6"	"Ability_BOSS_xiaogui"
+		"Ability7"	"Ability_Teleport"
+		"Ability8"	"sword_remove"
+		"SoundSet"	"Hero_DragonKnight"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+		"ModelScale"	"0.4"
+		"Model"	"models/daonv/daonv.vmdl"
+		"AttackAnimationPoint"	"0.5"
+		// 攻击前摇
+		"ArmorPhysical"	"0"
+		// 物理护甲
+		"AttackDamageMin"	"400"
+		// 最大攻击力
+		"AttackDamageMax"	"600"
+		// 最小攻击力
+		"AttackRange"	"200"
+		"AttributeBaseStrength"	"15"
+		// 基础力量
+		"AttributeStrengthGain"	"5"
+		// 每级增加的力量，力量成长
+		"AttributeBaseAgility"	"15"
+		// 基础敏捷
+		"AttributeAgilityGain"	"3"
+		// 每级增加的敏捷，敏捷成长
+		"AttributeBaseIntelligence"	"0"
+		// 基础智力
+		"AttributeIntelligenceGain"	"0"
+		// 每级增加的智力，智力成长
+		"MovementSpeed"	"600"
+		// 基础移动速度
+		"MovementTurnRate"	"1"
+		// 转身速度
+		"StatusHealth"	"5000"
+		// 基础生命值
+		"StatusHealthRegen"	"0.0"
+		// 基础生命恢复
+		"StatusMana"	"100"
+		// 基础魔法值
+		"StatusManaRegen"	"0"
+		// 基础魔法恢复
+		"VisionDaytimeRange"	"1050"
+		// 白天视野大小
+		"VisionNighttimeRange"	"700"
+		// 晚上视野大小
+		"HealthBarOffset"	"230"
+		"ProjectileSpeed"	"1050"
+		"ProjectileModel"	"particles/econ/items/drow/drow_bow_monarch/drow_frost_arrow_monarch.vpcf"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+		"AttackAcquisitionRange"	"500"
+		"AttackRate"	"1.7"
+		"MagicalResistance"	"0"
+		"StatusStartingMana"	"1"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_HERO"
+	}
+
+	"npc_dota_hero_fuwang"
+	{
+		"override_hero"	"npc_dota_hero_crystal_maiden"
+		"AbilityLayout"	"6"
+		"Ability1"	"Ability_Dropped"
+		"Ability2"	"omniknight_purification"
+		"Ability3"	"fuwang_03"
+		"Ability4"	"fuwang_04"
+		"Ability5"	"ability_custom_hero_state"
+		"Ability6"	"Ability_Teleport"
+		"Model"	"models/heroes/crystal_maiden/crystal_maiden.vmdl"
+		"AttackAnimationPoint"	"0.3"
+		// 攻击前摇
+		"ArmorPhysical"	"0"
+		// 物理护甲
+		"AttackDamageMin"	"500"
+		// 最大攻击力
+		"AttackDamageMax"	"500"
+		// 最小攻击力
+		"AttributeBaseStrength"	"15"
+		// 基础力量
+		"AttributeStrengthGain"	"0.0"
+		// 每级增加的力量，力量成长
+		"AttributeBaseAgility"	"10"
+		// 基础敏捷
+		"AttributeAgilityGain"	"0.0"
+		// 每级增加的敏捷，敏捷成长
+		"AttributeBaseIntelligence"	"25"
+		// 基础智力
+		"AttributeIntelligenceGain"	"5.0"
+		// 每级增加的智力，智力成长
+		"MovementSpeed"	"300"
+		// 基础移动速度
+		"MovementTurnRate"	"1"
+		// 转身速度
+		"StatusHealth"	"500"
+		// 基础生命值
+		"StatusHealthRegen"	"0.0"
+		// 基础生命恢复
+		"StatusMana"	"50"
+		// 基础魔法值
+		"StatusManaRegen"	"0.0"
+		// 基础魔法恢复
+		"VisionDaytimeRange"	"1050"
+		// 白天视野大小
+		"VisionNighttimeRange"	"700"
+		// 晚上视野大小
+		"HealthBarOffset"	"230"
+		"ProjectileSpeed"	"1050"
+		"ProjectileModel"	"particles/units/heroes/hero_vengeful/vengeful_base_attack.vpcf"
+		"Ability7"	""
+		"Ability8"	""
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+	}
+
+	"npc_dota_hero_budai"
+	{
+		"override_hero"	"npc_dota_hero_phantom_assassin"
+		"AbilityLayout"	"6"
+		"Ability1"	"fuwang_01"
+		"Ability2"	"fuwang_02"
+		"Ability3"	"fuwang_03"
+		"Ability4"	"fuwang_04"
+		"Ability5"	"ability_custom_hero_state"
+		"Ability6"	"Ability_Teleport"
+		"Model"	"models/effects/web_fall_01.vmdl"
+		"AttackAnimationPoint"	"0.3"
+		// 攻击前摇
+		"ArmorPhysical"	"100"
+		// 物理护甲
+		"AttackDamageMin"	"500"
+		// 最大攻击力
+		"AttackDamageMax"	"500"
+		// 最小攻击力
+		"AttributeBaseStrength"	"15"
+		// 基础力量
+		"AttributeStrengthGain"	"0.0"
+		// 每级增加的力量，力量成长
+		"AttributeBaseAgility"	"10"
+		// 基础敏捷
+		"AttributeAgilityGain"	"0.0"
+		// 每级增加的敏捷，敏捷成长
+		"AttributeBaseIntelligence"	"25"
+		// 基础智力
+		"AttributeIntelligenceGain"	"5.0"
+		// 每级增加的智力，智力成长
+		"MovementSpeed"	"300"
+		// 基础移动速度
+		"MovementTurnRate"	"1"
+		// 转身速度
+		"StatusHealth"	"500"
+		// 基础生命值
+		"StatusHealthRegen"	"0.0"
+		// 基础生命恢复
+		"StatusMana"	"50"
+		// 基础魔法值
+		"StatusManaRegen"	"0.0"
+		// 基础魔法恢复
+		"VisionDaytimeRange"	"1050"
+		// 白天视野大小
+		"VisionNighttimeRange"	"700"
+		// 晚上视野大小
+		"HealthBarOffset"	"230"
+		"ProjectileSpeed"	"1050"
+		"Ability7"	""
+		"Ability8"	""
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+	}
+
+	"npc_cike2_BOSS"
+	{
+		"override_hero"	"npc_dota_hero_templar_assassin"
+		"Model"	"models/heroes/lanaya/lanaya.vmdl"
+		"Level"	"1"
+		// Ability 1.
+		"Ability1"	"creature_meat_hook"
+		// Ability 2.
+		"Ability2"	"nyx_assassin_mana_burn"
+		// Ability 3.
+		"Ability3"	"creature_dismember"
+		// Ability 4.
+		"Ability4"	"templar_assassin_refraction"
+		// Ability 5.
+		"Ability5"	""
+		// Ability 6 - Extra.
+		"Ability6"	""
+		// Ability 7 - Extra.
+		"Ability7"	""
+		// Ability 8 - Extra.
+		"Ability8"	""
+		// Armor
+		// ----------------------------------------------------------------
+		// Physical protection.
+		"ArmorPhysical"	"25"
+		// Magical protection.
+		"MagicalResistance"	"50"
+		// Attack
+		// ----------------------------------------------------------------
+		"AttackCapabilities"	"DOTA_UNIT_CAP_RANGED_ATTACK"
+		// Damage range min.
+		"AttackDamageMin"	"400"
+		// Damage range max.
+		"AttackDamageMax"	"575"
+		// Speed of attack.
+		"AttackRate"	"1.7"
+		// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"	"0.5"
+		// Range within a target can be acquired.
+		"AttackAcquisitionRange"	"2000"
+		// Range within a target can be attacked.
+		"AttackRange"	"600"
+		// Bounty
+		// ----------------------------------------------------------------
+		// Experience earn.
+		"BountyXP"	"1000"
+		// Gold earned min.
+		"BountyGoldMin"	"35"
+		// Gold earned max.
+		"BountyGoldMax"	"42"
+		// Bounds
+		// ----------------------------------------------------------------
+		"RingRadius"	"70"
+		"HealthBarOffset"	"300"
+		"BoundsHullName"	"DOTA_HULL_SIZE_HERO"
+		// Movement
+		// ----------------------------------------------------------------
+		// Type of locomotion - ground, air
+		"MovementCapabilities"	"DOTA_UNIT_CAP_MOVE_GROUND"
+		// Speed
+		"MovementSpeed"	"350"
+		// Turning rate.
+		"MovementTurnRate"	"0.5"
+		// Status
+		// ----------------------------------------------------------------
+		// Base health.
+		"StatusHealth"	"150"
+		// Health regeneration rate.
+		"StatusHealthRegen"	"10.0"
+		// Base mana.
+		"StatusMana"	"1500"
+		// Mana regeneration rate.
+		"StatusManaRegen"	"10.0"
+		// Team
+		// ----------------------------------------------------------------
+		// Team name.
+		"TeamName"	"DOTA_TEAM_BADGUYS"
+		"CombatClassAttack"	"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"	"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"	"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		// Vision
+		// ----------------------------------------------------------------
+		// Range of vision during day light.
+		"VisionDaytimeRange"	"1000"
+		// Range of vision at night time.
+		"VisionNighttimeRange"	"1000"
+		// Speed of projectile.
+		"ProjectileSpeed"	"1500"
+		"ProjectileModel"	"particles/econ/items/templar_assassin/templar_assassin_focal/ta_focal_base_attack.vpcf"
+		"vscripts"	"system/ai/lanaya.lua"
+		"Ability9"	""
+		"Ability10"	""
+		"Ability11"	""
+		"Ability12"	""
+		"Ability13"	""
+		"Ability14"	""
+		"Ability15"	""
+		"Ability16"	""
+	}
+}

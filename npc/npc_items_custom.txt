@@ -1,0 +1,1387 @@
+// Dota2 Editor
+// Get latest version: https://github.com/zombieJ/nw-dota2editor
+
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+	// =================================================================================================================
+	// Holdout Tombstone
+	// =================================================================================================================
+	"item_tombstone"
+	{
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityCastPoint"	"0.0"
+		// Stats
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"100"
+		"AbilityChannelTime"	"8.0"
+		"ItemQuality"	"consumable"
+		"ItemCastOnPickup"	"1"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"99999"
+		"ItemShareability"	"ITEM_FULLY_SHAREABLE"
+		"ItemPurchasable"	"0"
+		"ItemKillable"	"0"
+		"ItemPermanent"	"0"
+		"ItemInitialCharges"	"1"
+		"ItemStackable"	"1"
+		"ItemShopTags"	"consumable"
+		"ItemRequirements"	{}
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
+		}
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityName"	"item_tombstone"
+		"Model"	"models/props_gameplay/tombstoneb01.vmdl"
+		"PingOverrideText"	"DOTA_Chat_Tombstone_Pinged"
+	}
+
+	"item_4221"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_4221"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"4221"
+		"ItemQuality"	"rare"
+		"ItemCost"	"3700"
+		"ItemShareability"	"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPurchasable"	"0"
+		"ItemKillable"	"1"
+		"ItemRequirements"	{}
+		"Modifiers"
+		{
+			"longyuanjian_level_2"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"500"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"75"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"50"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"10"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"20"
+				}
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"Target"	"TARGET"
+						"ModifierName"	"pojia"
+						"duration"	"10"
+					}
+				}
+			}
+			"pojia"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"-50"
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"Type"	"2"
+			}
+		}
+		//
+		//
+		// "Model"						"models/items/jian.vmdl"
+		"Effect"	"particles/itemQuality/rare.vpcf"
+	}
+
+	// -------------------------------------------------------------------------------------------------------------
+	// 钱袋子
+	"item_bag_of_gold"
+	{
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityCastPoint"	"0.0"
+		// Stats
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"100"
+		"ItemQuality"	"consumable"
+		"ItemCastOnPickup"	"1"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"99999"
+		"ItemShareability"	"ITEM_FULLY_SHAREABLE"
+		"ItemPurchasable"	"0"
+		"ItemKillable"	"0"
+		"ItemKillable"	"0"
+		"ItemPermanent"	"0"
+		"ItemInitialCharges"	"0"
+		"ItemStackable"	"1"
+		"ItemShopTags"	"consumable"
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityName"	"item_bag_of_gold"
+		"Model"	"models/props_gameplay/gold_bag.vmdl"
+	}
+
+	// -------------------------------------------------------------------------------------------------------------
+	// 铁剑
+	"item_0001"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_0001"
+		"ScriptFile"	"lua_items/item_0001.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_TREE"
+		"AbilityCastRange"	"200"
+		"AbilityChannelTime"	"1.0"
+		// -------------------------------------------------------------------------------------------------------------
+		// General
+		"ID"	"8001"
+		"ItemQuality"	"epic"
+		"ItemCost"	"100"
+		// -------------------------------------------------------------------------------------------------------------
+		// Item Info
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemAlertable"	"1"
+		"MaxUpgradeLevel"	"5"
+		"MaxUpgradeLevel"	"10"
+		"ItemBaseLevel"	"1"
+		"ItemRequirements"	{}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_strength"	"110 120 130 140 150"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_intellect"	"110"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_agility"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"4"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_strength_random"	"110"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_intellect_random"	"110"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_agility_random"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage_random"	"100"
+			}
+		}
+		"Effect"	"particles/hero_pp/item_zise.vpcf"
+	}
+
+	// =================================================================================================================
+	// Broadsword (epic)
+	// =================================================================================================================
+	"item_broadsword_epic"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_broadsword"
+		"ScriptFile"	"lua_items/item_broadsword_epic.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemQuality"	"epic"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"100"
+		"SideShop"	"1"
+		"ItemShopTags"	"damage"
+		"ItemAliases"	"broadsword"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------------------------------------------------
+	// 铁剑
+	"item_0002"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_0002"
+		"ScriptFile"	"lua_items/item_0002.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_TREE"
+		"AbilityCastRange"	"200"
+		"AbilityChannelTime"	"1.0"
+		// -------------------------------------------------------------------------------------------------------------
+		// General
+		"ID"	"8002"
+		"ItemQuality"	"comment"
+		"ItemCost"	"100"
+		// -------------------------------------------------------------------------------------------------------------
+		// Item Info
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemAlertable"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect"	"110"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"part"	"4"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength_random"	"110"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect_random"	"110"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility_random"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage_random"	"100"
+			}
+		}
+		"Effect"	"particles/hero_pp/item_green.vpcf"
+		"MaxUpgradeLevel   "	"10"
+	}
+
+	// -------------------------------------------------------------------------------------------------------------
+	// 铁剑
+	"item_0003"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_0003"
+		"ScriptFile"	"lua_items/item_0003.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_TREE"
+		"AbilityCastRange"	"200"
+		"AbilityChannelTime"	"1.0"
+		// -------------------------------------------------------------------------------------------------------------
+		// General
+		"ID"	"8003"
+		"ItemQuality"	"rare"
+		"ItemCost"	"100"
+		// -------------------------------------------------------------------------------------------------------------
+		// Item Info
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemAlertable"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect"	"110"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"part"	"4"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength_random"	"110"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect_random"	"110"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility_random"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage_random"	"100"
+			}
+		}
+		"MaxUpgradeLevel   "	"10"
+		"Effect"	"particles/hero_pp/item_blue.vpcf"
+	}
+
+	// -------------------------------------------------------------------------------------------------------------
+	// 铁剑
+	"item_0004"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_0004"
+		"ScriptFile"	"lua_items/item_0004.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_TREE"
+		"AbilityCastRange"	"200"
+		"AbilityChannelTime"	"1.0"
+		// -------------------------------------------------------------------------------------------------------------
+		// General
+		"ID"	"8004"
+		"ItemQuality"	"artifact"
+		"ItemCost"	"100"
+		// -------------------------------------------------------------------------------------------------------------
+		// Item Info
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemAlertable"	"1"
+		"MaxUpgradeLevel"	"10"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect"	"110"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"part"	"4"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength_random"	"110"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect_random"	"110"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility_random"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage_random"	"100"
+			}
+		}
+		"Effect"	"particles/hero_pp/item_orange.vpcf"
+	}
+
+	"item_0005"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_0005"
+		"ScriptFile"	"lua_items/item_0005.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_TREE"
+		"AbilityCastRange"	"200"
+		"AbilityChannelTime"	"1.0"
+		// -------------------------------------------------------------------------------------------------------------
+		// General
+		"ID"	"8005"
+		"ItemQuality"	"consumable"
+		"ItemCost"	"100"
+		// -------------------------------------------------------------------------------------------------------------
+		// Item Info
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemAlertable"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect"	"110"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"part"	"4"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength_random"	"110"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect_random"	"110"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility_random"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage_random"	"100"
+			}
+		}
+		"MaxUpgradeLevel   "	"10"
+	}
+
+	"item_0006"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_0006"
+		"ScriptFile"	"lua_items/item_0006.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"	"200"
+		"AbilityChannelTime"	"1.0"
+		// -------------------------------------------------------------------------------------------------------------
+		// General
+		"ID"	"8006"
+		"ItemQuality"	"component"
+		"ItemCost"	"100"
+		// -------------------------------------------------------------------------------------------------------------
+		// Item Info
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemAlertable"	"1"
+		"MaxUpgradeLevel"	"10"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect"	"110"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"part"	"5"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength_random"	"110"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect_random"	"110"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility_random"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage_random"	"100"
+			}
+			"10"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed_random"	"100"
+			}
+			"11"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"100"
+			}
+		}
+	}
+
+	"item_0007"
+	{
+		"BaseClass"	"item_lua"
+		"AbilityTextureName"	"item_0007"
+		"ScriptFile"	"lua_items/item_0007.lua"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"	"200"
+		"AbilityChannelTime"	"1.0"
+		// -------------------------------------------------------------------------------------------------------------
+		// General
+		"ID"	"8007"
+		"ItemQuality"	"secret_shop"
+		"ItemCost"	"100"
+		// -------------------------------------------------------------------------------------------------------------
+		// Item Info
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemAlertable"	"1"
+		"MaxUpgradeLevel"	"10"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect"	"110"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"part"	"2"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage"	"100"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_strength_random"	"110"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_intellect_random"	"110"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"bonus_agility_random"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_damage_random"	"100"
+			}
+			"10"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_armor_random"	"10"
+			}
+			"11"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_armor"	"10"
+			}
+			"12"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed_random"	"100"
+			}
+			"13"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"100"
+			}
+			"14"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_health_random"	"100"
+			}
+			"15"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_health"	"100"
+			}
+			"16"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bbonus_magicalarmor_random"	"10"
+			}
+			"17"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_magicalarmor"	"10"
+			}
+			"18"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"mana_regen_random"	"10"
+			}
+			"19"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"mana_regen"	"10"
+			}
+			"20"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"health_regen_random"	"10"
+			}
+			"21"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"health_regen"	"10"
+			}
+		}
+	}
+
+	"item_recipe_1003"
+	{
+		"BaseClass"	"item_recipe_arcane_boots"
+		"AbilityTextureName"	"item_recipe_1003"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1500"
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_1003"
+		"ItemRequirements"
+		{
+			"01"	"item_3001;item_2002"
+		}
+	}
+
+	"item_1001"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1001"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1001"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_strength"	"10"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"4"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1001"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%bonus_strength"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1002"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1002"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1002"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_intellect"	"10"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"2"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1002"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%bonus_intellect"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1003"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1003"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1003"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_agility"	"10"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"0"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1003"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_agility"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1004"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1004"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1004"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"5"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1004"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1005"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1005"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1005"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"1"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1005"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1006"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1006"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1006"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_strength"	"10"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"4"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1006"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%bonus_strength"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1007"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1007"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1007"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_intellect"	"10"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"2"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_agility"	"10"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1007"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_agility"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%bonus_intellect"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1008"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1008"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1008"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_agility"	"5"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"0"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1008"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_agility"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1009"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1009"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1009"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"1"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"5"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_agility"	"10"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"defend_jin"	"10"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1009"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_agility"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					"MODIFIER_PROPERTY_COOLDOWN_REDUCTION_CONSTANT"	"5"
+				}
+			}
+			
+		}
+		"OnEquip"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/abilities/abilityItem.lua"
+				"Function"	"AddDefend"
+				"defend_jin"	"%defend_jin"
+			}
+		}
+		"OnUnequip"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/abilities/abilityItem.lua"
+				"Function"	"RemoveDefend"
+				"defend_jin"	"%defend_jin"
+			}
+		}
+	}
+
+	"item_1010"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1010"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1010"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"1"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1010"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					
+				}
+			}
+			
+		}
+	}
+
+	"item_1011"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1011"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1011"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"1"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1011"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					
+				}
+			}
+			
+		}
+	}
+	"item_1012"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1012"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1012"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"1"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1012"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					
+				}
+			}
+			
+		}
+	}
+	"item_1013"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1013"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1013"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"1"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1013"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					
+				}
+			}
+			
+		}
+	}
+	"item_1014"
+	{
+		"BaseClass"	"item_datadriven"
+		"AbilityTextureName"	"item_1014"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1014"
+		"ItemCost"	"100"
+		"ItemSellable"	"1"
+		"ItemRequirements"	{}
+		"MaxUpgradeLevel"	"1"
+		"ItemBaseLevel"	"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"bonus_speed"	"110"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"part"	"1"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_1014"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"	"%bonus_speed"
+					
+				}
+			}
+			
+		}
+	}
+}
